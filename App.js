@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.title}>eCommerce con React Native</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +13,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#1a1a',
     justifyContent: 'center',
+  },
+  title: {
+    color: 'white',
+    fontSize: 25,
+    textAlign: 'center'
   },
 });
