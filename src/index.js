@@ -1,13 +1,8 @@
 import { useState } from "react";
 import {
-  Text,
   View,
-  TextInput,
-  Button,
   SafeAreaView,
-  FlatList,
-  Modal,
-  TouchableOpacity,
+  FlatList
 } from "react-native";
 
 import { InputTask, ItemDetail, TaskItem } from "./components/index.js";
@@ -30,7 +25,7 @@ export default function App() {
       {
         id: Date.now().toString(),
         value: task,
-        completed: false
+        completed: false,
       },
     ]);
     setTask("");
@@ -57,10 +52,10 @@ export default function App() {
   };
 
   const onHandlerComplete = (id) => {
-    const task = tasks.find(task => task.id === id);
+    const task = tasks.find((task) => task.id === id);
     task.completed = true;
     setIsVisible(false);
-  }
+  };
 
   const onHandlerDelete = (id) => {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));

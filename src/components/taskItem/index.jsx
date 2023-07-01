@@ -8,7 +8,7 @@ const TaskItem = ({ onHandlerDeleteTask, item }) => {
       onPress={() => onHandlerDeleteTask(item)}
       style={item.completed ? styles.containerItemCompleted : styles.containerItem}>
       <Text style={styles.text}>{item.value}</Text>
-      {item.completed ? <Text style={styles.text}>✔</Text> : null}
+      <Text style={styles.text}>{item.completed ? "✔" : "➢"}</Text>
     </TouchableOpacity>
   );
 };
